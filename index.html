@@ -7,48 +7,72 @@
 </head>
 <body>
 <h1>Walk-A-Thon</h1>
-<form class="form-inline">
-  <div class="form-group">
-    <label for="exampleInputName2">Name</label>
-    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-  </div>
- 	<div class="form-group">
-    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-    <div class="input-group">
-      <div class="input-group-addon">$</div>
-      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-      <div class="input-group-addon">.00</div>
-    </div>
-    <div class="form-group">
-      <div class="donation">
-      <input type="text" class="form-control" placeholder="i.e. per lap or lumpsum">
-      </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Donate</button>
-  <button type="submit" class="btn btn-secondary">Cancel</button>
-</form>
-<div>
-	<table class="table table-bordered">
-	  
-			<!-- On rows -->
-<!-- 		<tr class="active">...</tr>
-		<tr class="success">...</tr>
-		<tr class="warning">...</tr>
-		<tr class="danger">...</tr>
-		<tr class="info">...</tr> -->
+	<div>
+		<div class="container">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3>Current Donations</h3>
+					</div>
+						<div class="panel-body">
+							<table class="table table-bordered">
+					  
+								<!-- On rows -->
+					<!-- 		<tr class="active">...</tr>
+							<tr class="success">...</tr>
+							<tr class="warning">...</tr>
+							<tr class="danger">...</tr>
+							<tr class="info">...</tr> -->
 
-		<!-- On cells (`td` or `th`) -->
-		<tr>
-			<th>Name</th>
-			<th>Donation Amount</th>
-			<th>Donation Basis</th>
-<!-- 		  <td class="active">...</td>
-		  <td class="success">...</td>
-		  <td class="warning">...</td>
-		  <td class="danger">...</td>
-		  <td class="info">...</td> -->
-		</tr>
-	</table>
+							<!-- On cells (`td` or `th`) -->
+							<tr>
+								<th>Name</th>
+								<th>Donation Amount</th>
+								<th>Donation Basis</th>
+					<!-- 		  <td class="active">...</td>
+							  <td class="success">...</td>
+							  <td class="warning">...</td>
+							  <td class="danger">...</td>
+							  <td class="info">...</td> -->
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>Enter Your Information</h3>
+			</div>
+				<div class="panel-body">
+				<form class="form">
+				  <div class="form-group">
+				    <label for="exampleInputName2">Full Name</label>
+				    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+				  </div>
+				 	<div class="form-group">
+				    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				      <label for="exampleInputAmount">Donation Amount</label>
+				    		<div class="input-group">
+				      		<div class="input-group-addon">$</div>
+				      			<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+				      				<div class="input-group-addon">.00</div>
+				    		</div>
+				    		<div class="form-group">
+				     	<div class="donation">
+				      	<label for="increament">Donation Basis</label>
+				      		<input type="text" class="form-control" placeholder="i.e. per lap or lumpsum" id="increament">
+				      </div>
+				  	</div>
+				  		<button type="submit" class="btn btn-primary" id="donate">Donate</button>
+				  		<button type="submit" class="btn btn-secondary" id="cancel">Cancel</button>
+				</form>
+				</div>
+		</div>
+	</div>
 </div>
 	<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
