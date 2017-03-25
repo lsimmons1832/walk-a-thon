@@ -1,27 +1,31 @@
 var WalkAThon = (function(oldWalkAThon) {
-	var donor = [];
+  var donor = [{name: "Latasha Simmons", email:"lsimmons1832@gmail.com", amount:"100", increament: "single"}];
 
-	return{
-		getDonor: function(){
-			var currentDonor = document.getElementByClassName('table');
-			var donorString = '';
-			donorString += `<tbody><th>Name:</th><th>Email:</th><th>Donation Amount:</th><th>Donation Basis:</th>`
-			for (var i = 0; i < donor.length; i++) {
-				if (true) {
-					donorString += `<tr><td>${donor[i].name}<td/>`
-					donorString += `<td>${donor[i].email}<td/>`
-					donorString += `<td>${donor[i].amount}<td/>`
-					donorString += `<td>${donor[i].increament}<td/></tr>`
-				}
-				donorString += `</tbody>`
-				currentDonor.innerHTML = donorString;
-
-				return donor;
-				}
-			},
-			addDonor: function(){
-				donor.push({name:"", email:"",amount:"", increament:""});
-			}
- };
-	return oldWalkAThon;
-})(WalkAThon);
+  return {
+      getDonor: function() {
+      	return donor;
+      },
+      addDonor: function(newDonor) {
+          donor.push(newDonor);
+          console.log("new object",newDonor);
+      },
+      setDonor: function(userInput) {
+          var donorsList = donor.length - 1;
+          for (var x = 0; x < userInput.length; x++) {
+              if (userInput[x].id === "name" && userInput[x].value !== '') {
+                  donor[donorsList].name = userInput[x].value;
+              }
+              if (userInput[x].id === "email" && userInput[x].value !== '') {
+                  donor[donorsList].email = userInput[x].value;
+              }
+              if (userInput[x].id === "amount" && userInput[x].value !== '') {
+                  donor[donorsList].amount = userInput[x].value;
+              }
+              if (userInput[x].checked === true) {
+                  donor[donorsList].increament = userInput[x].value;
+                  console.log(userInput);
+              }
+            }
+          }
+        }
+})();
