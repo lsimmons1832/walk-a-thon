@@ -27,6 +27,7 @@
 							<!-- On cells (`td` or `th`) -->
 							<tr>
 								<th>Name</th>
+								<th>Email Address</th>
 								<th>Donation Amount</th>
 								<th>Donation Basis</th>
 					<!-- 		  <td class="active">...</td>
@@ -53,6 +54,10 @@
 				    <label for="exampleInputName2">Full Name</label>
 				    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
 				  </div>
+				    <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					  </div>
 				 	<div class="form-group">
 				    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
 				      <label for="exampleInputAmount">Donation Amount</label>
@@ -61,12 +66,11 @@
 				      			<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
 				      				<div class="input-group-addon">.00</div>
 				    		</div>
-				    		<div class="form-group">
-				     	<div class="donation">
-				      	<label for="increament">Donation Basis</label>
-				      		<input type="text" class="form-control" placeholder="i.e. per lap or lumpsum" id="increament">
-				      </div>
-				  	</div>
+				    	   	<div class="donation">
+				      	  <label for="increament">Donation Basis</label>
+				      		<input type="radio" value="single"> Single
+				      		<input type="radio" value="per-lap"> Per-Lap
+				       	</div>
 				  		<button type="submit" class="btn btn-primary" id="donate">Donate</button>
 				  		<button type="submit" class="btn btn-secondary" id="cancel">Cancel</button>
 				</form>
@@ -74,6 +78,8 @@
 		</div>
 	</div>
 </div>
+	<script src="DOMHandler.js"></script>
+	<script src="donor.js"></script>
 	<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
